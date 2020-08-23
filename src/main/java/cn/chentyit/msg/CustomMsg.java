@@ -105,7 +105,7 @@ public class CustomMsg {
      * @return 返回一个无数据的成功对象
      */
     public static CustomMsg ok() {
-        return new CustomMsg(CustomMsg.CODE_OK, CustomMsg.MSG_SUCCESS);
+        return CustomMsg.ok(null);
     }
 
     /**
@@ -122,7 +122,7 @@ public class CustomMsg {
      * @return 返回一个无数据的失败对象
      */
     public static CustomMsg invalidRequest() {
-        return CustomMsg.invalidRequest("");
+        return CustomMsg.invalidRequest(null);
     }
 
     /**
@@ -139,7 +139,7 @@ public class CustomMsg {
      * @return 返回一个无数据的未认证对象
      */
     public static CustomMsg noAuthenticate() {
-        return new CustomMsg(CustomMsg.CODE_NO_AUTHENTICATE, CustomMsg.MSG_NO_AUTHENTICATE);
+        return CustomMsg.noAuthenticate(null);
     }
 
     /**
@@ -156,7 +156,7 @@ public class CustomMsg {
      * @return 返回一个无数据的失败对象
      */
     public static CustomMsg failure() {
-        return new CustomMsg(CustomMsg.CODE_FAILURE, CustomMsg.MSG_FAILURE);
+        return CustomMsg.failure(null);
     }
 
     /**
