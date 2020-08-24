@@ -64,4 +64,20 @@ public class CustomFastJsonTools {
             return jsonObject.getString(keyArr[keyArr.length - 1]);
         }
     }
+
+    /**
+     * 将 Json 中的数组数据转化成 List
+     *
+     * @param jsonStr json 字符串
+     * @param clazz   转化的目标类型
+     * @param <T>     转化的泛型
+     * @return
+     */
+    public static <T> List<T> jsonArr2ListObj(String jsonStr, Class<T> clazz) throws CustomJsonException {
+        if (jsonStr == null || "".equals(jsonStr) || !jsonStr.startsWith("[")) {
+            throw new CustomJsonException("json string does not conform to specification");
+        }
+
+        return JSONObject.parseArray(jsonStr, clazz);
+    }
 }
