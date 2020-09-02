@@ -9,11 +9,9 @@ import java.util.List;
  * @author chentyit
  * @version 1.0
  * @date 2020/8/23 3:13 下午
- * @desc 用于转化 json 工具生成的不同对象，以及一些自定义工具
+ * @desc Alibaba 处理 JSON 的工具扩展类
  */
 public class CustomFastJsonTools {
-
-    // ============================ Alibaba 处理 JSON 的工具方法 ============================
 
     /**
      * 将 JSON 字符串转化为 alibaba 的 JsonObject
